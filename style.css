@@ -1,0 +1,69 @@
+html {
+    --primary-color: #1db954;
+    --dark-color: #191414;
+    --light-color: #ffffff;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--dark-color);
+}
+
+.audio {
+    background-color: var(--light-color);
+    width: 220px;
+}
+
+#artwork-image {
+    width: 100%;
+}
+
+.audio-body {
+    padding: 0.5rem;
+}
+
+ul {
+    list-style: none;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+}
+
+.start-time, .end-time {
+    display: flex;
+}
+
+/* .bar {
+    background-color: var(--dark-color);
+    width: 60%;
+    animation-name: playing-bar;
+    animation-duration: 5s;
+    text-align: left;
+}
+
+@keyframes playing-bar {
+    from {
+        width: 0%;
+        height: 1px;
+        background-color: var(--primary-color);
+    }
+
+    to {
+        width: 60%;
+    }
+} */
+
+
+.progress-container {
+    background-color: #1db954;
+    height: 2rem;
+    width: 100%;
+}
+
+.bar {
+    background-color: aqua;
+    height: 2rem;
+    width: 0%;
+}
