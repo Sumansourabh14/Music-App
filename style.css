@@ -2,6 +2,13 @@ html {
     --primary-color: #1db954;
     --dark-color: #191414;
     --light-color: #ffffff;
+    --card-color: #1d1d1d;
+    --misc-color: #8d8d8d;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
 }
 
 body {
@@ -9,61 +16,86 @@ body {
     background-color: var(--dark-color);
 }
 
+.navbar-container {
+    background-color: #000;
+    height: 4rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.audio-container {
+    padding: 1rem;
+}
+
 .audio {
-    background-color: var(--light-color);
+    background-color: var(--card-color);
+    border-radius: 0.5rem;
+    color: var(--light-color);
     width: 220px;
+    padding: 1rem;
+    margin-top: 1rem;
 }
 
 #artwork-image {
     width: 100%;
+    border-radius: 0.5rem;
 }
 
-.audio-body {
-    padding: 0.5rem;
+.track-name {
+    font-size: 1.3rem;
+    margin-top: 1rem;
 }
 
-ul {
-    list-style: none;
+.artist-name {
+    color: var(--misc-color);
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-top: 0.6rem;
 }
 
 .time {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 1.2rem 0;
 }
 
 .start-time, .end-time {
+    color: var(--misc-color);
     display: flex;
+    font-size: 0.8rem;
 }
 
-/* .bar {
-    background-color: var(--dark-color);
-    width: 60%;
-    animation-name: playing-bar;
-    animation-duration: 5s;
-    text-align: left;
+.play-btn {
+    padding: 1rem;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--primary-color);
 }
 
-@keyframes playing-bar {
-    from {
-        width: 0%;
-        height: 1px;
-        background-color: var(--primary-color);
-    }
-
-    to {
-        width: 60%;
-    }
-} */
-
-
-.progress-container {
-    background-color: #1db954;
+/* Earlier style of the progress bar */
+/* .progress-container {
+    background-color:#585858;
     height: 2rem;
     width: 100%;
 }
 
 .bar {
-    background-color: aqua;
+    background-color: var(--light-color);
     height: 2rem;
+    width: 0%;
+} */
+
+.progress-container {
+    background-color:#585858;
+    border-radius: 1rem;
+    height: 0.6rem;
+    width: 100%;
+}
+
+.bar {
+    background-color: var(--light-color);
+    border-radius: 1rem;
+    height: 0.6rem;
     width: 0%;
 }

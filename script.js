@@ -46,14 +46,14 @@ function playAudio() {
     console.log(Math.floor(audio.currentTime));
     console.log(Math.floor(audio.duration));
 
-    playBtn.innerHTML = `<i class="fas fa-pause"></i>`;
+    playBtn.innerHTML = `<i class="fas fa-pause fa-lg"></i>`;
 
 }
 
 function pauseAudio() {
     audio.pause();
 
-    playBtn.innerHTML = `<i class="fas fa-play"></i>`;
+    playBtn.innerHTML = `<i class="fas fa-play fa-lg"></i>`;
 }
 
 function showTime() {
