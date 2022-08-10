@@ -6,12 +6,12 @@ let artworkImage = document.getElementById('artwork-image');
 
 //Select the buttons
 const playBtn = document.querySelector('.play-btn');
-const nextBtn = document.querySelector('.next-btn');
-const previous = document.querySelector('.previous-btn');
+// const nextBtn = document.querySelector('.next-btn');
+// const previous = document.querySelector('.previous-btn');
 
 //Select the whole time container of the track
-const startTime = document.querySelector('.start-time');
-const endTime = document.querySelector('.end-time');
+// const startTime = document.querySelector('.start-time');
+// const endTime = document.querySelector('.end-time');
 
 //Select the current time of the track
 const startMinutes = document.querySelector('.minutes');
@@ -40,6 +40,17 @@ artworkImage.setAttribute("src", audiofile.artwork);
 
 playBtn.addEventListener('click', togglePlay);
 
+//Once the current track stops playing (ends)
+audio.addEventListener('ended', showPlayBtn);
+
+//Show play button icon once the track reaches its duration
+function showPlayBtn() {
+    playBtn.innerHTML = `<i class="fas fa-play fa-lg"></i>`;
+    console.log(`The current song: ${audiofile.name} has stopped playing.`);
+
+    playAudio();
+}
+
 function playAudio() {
     audio.play();
 
@@ -47,7 +58,6 @@ function playAudio() {
     console.log(Math.floor(audio.duration));
 
     playBtn.innerHTML = `<i class="fas fa-pause fa-lg"></i>`;
-
 }
 
 function pauseAudio() {
@@ -111,13 +121,6 @@ function togglePlay() {
 
         let j = Math.floor(audio.duration / 100);
         progress = setInterval(progressBar, j);
-
-        
-    //New line - need to be looked at
-        // if (Math.floor(audio.currentTime) === Math.floor(audio.duration)) {   
-        //     playBtn.innerHTML = `<i class="fas fa-pause"></i>`;
-        // }
-
     }
     else {
         pauseAudio();
@@ -150,4 +153,3 @@ function setProgress(event) {
 
     audio.currentTime = (setTime / widthOfBar) * duration;
 }
-
