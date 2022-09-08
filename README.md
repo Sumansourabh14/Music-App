@@ -18,6 +18,7 @@ Project: [Link](https://sumansourabh14.github.io/Music-App/)
 ## Helpful Links
 
 * [Project](https://sumansourabh14.github.io/Music-App/)
-* [Web Audio API (JavaScript)](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+* [HTMLMediaElement API](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement)
+* [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
 
 Thank you for viewing this project.
